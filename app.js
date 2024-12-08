@@ -76,5 +76,6 @@ mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true 
 
 // Start server
 app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+    const runningHost = process.env.RENDER_EXTERNAL_URL; 
+    console.log(`Server is running on ${runningHost}`);
 });
